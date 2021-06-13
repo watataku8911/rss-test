@@ -1,0 +1,66 @@
+@media screen and (min-width: 1026px) {
+  .link {
+    display: block;
+    width: 18%;
+  }
+
+  .card {
+    margin-top: 20px;
+    height: 350px;
+    box-shadow: 5px 5px 5px 5px #000;
+    margin-bottom: 20px;
+  }
+  .image_box img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .text {
+    font-size: 0.8em;
+  }
+}
+/*タブレット*/
+@media screen and (min-width: 482px) and (max-width: 1025px) {
+  .link {
+    display: block;
+    width: 40%;
+  }
+
+  .card {
+    margin-top: 20px;
+    height: 350px;
+    box-shadow: 5px 5px 5px 5px #000;
+    margin-bottom: 20px;
+  }
+
+  .image_box img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .text {
+    font-size: 0.95em;
+  }
+}
+/*スマホ*/
+@media screen and (max-width: 481px) {
+  .link {
+    display: block;
+    width: 100%;
+  }
+
+  .card {
+    margin-top: 20px;
+    height: 450px;
+    box-shadow: 5px 5px 5px 5px #000;
+    margin-bottom: 20px;
+  }
+  .image_box img {
+    width: 100%;
+    height: 230px;
+  }
+
+  .text {
+    font-size: 1em;
+  }
+}
