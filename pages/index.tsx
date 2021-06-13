@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>res-test</title>
+        <title>rss-test</title>
         <meta name="description" content="Zennのデータを取得してみました。" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
