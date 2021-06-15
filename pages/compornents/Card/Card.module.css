@@ -3,7 +3,7 @@
 }
 
 @media screen and (min-width: 1026px) {
-  .link {
+  .href {
     display: block;
     width: 18%;
   }
@@ -17,7 +17,7 @@
   }
   .image_box img {
     width: 100%;
-    height: 150px;
+    height: 200px;
   }
 
   .text {
@@ -26,14 +26,14 @@
 }
 /*タブレット*/
 @media screen and (min-width: 482px) and (max-width: 1025px) {
-  .link {
+  .href {
     display: block;
     width: 40%;
   }
 
   .card {
     margin-top: 20px;
-    height: 350px;
+    height: 450px;
     box-shadow: 22px 16px 27px -3px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
     border: solid 1px #000;
@@ -41,7 +41,7 @@
 
   .image_box img {
     width: 100%;
-    height: 150px;
+    height: 250px;
   }
 
   .text {
@@ -50,7 +50,7 @@
 }
 /*スマホ*/
 @media screen and (max-width: 481px) {
-  .link {
+  .href {
     display: block;
     width: 100%;
   }
@@ -64,7 +64,7 @@
   }
   .image_box img {
     width: 100%;
-    height: 230px;
+    height: 280px;
   }
 
   .text {

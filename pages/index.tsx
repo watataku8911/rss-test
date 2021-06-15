@@ -41,7 +41,32 @@ type Enclosure = {
 export default function Home() {
   const [lists, setLists] = useState<Items[]>([]);
 
-  const getZenn = async () => {
+  const stringCutTitle = (title: string): string => {
+    const max_length: number = 15; //文字数上限
+    let modStr: string = ""; //カット後の文字列
+
+    if (title.length > max_length) {
+      modStr = title.substr(0, max_length) + "...";
+      return modStr;
+    } else {
+      return title;
+    }
+  };
+
+  const stringCutDescription = (description: string): string => {
+    const STRING: string = description;
+    const MAX_LENGTH: number = 50; //文字数上限
+    let modStr: string = ""; //カット後の文字列
+
+    if (STRING.length > MAX_LENGTH) {
+      modStr = STRING.substr(0, MAX_LENGTH) + "...";
+      return modStr;
+    } else {
+      return STRING;
+    }
+  };
+
+  const getZenn = async (): Promise<Items[]> => {
     const endpoint: string = "https://api.rss2json.com/v1/api.json";
     const feed_url: string = "https://zenn.dev/feed";
 
@@ -50,12 +75,17 @@ export default function Home() {
     );
     const data: Response = await resp.json();
 
+    console.log(data);
+
     const zennItems: Items[] = data.items;
-    setLists(zennItems);
+    return zennItems;
   };
 
   useEffect(() => {
-    getZenn();
+    const zennFeed: Promise<Items[]> = getZenn();
+    zennFeed.then((datalist) => {
+      setLists(datalist);
+    });
   }, []);
 
   return (
@@ -72,9 +102,8 @@ export default function Home() {
           return (
             <Card
               link={item.link}
-              enclosure={item.enclosure}
-              title={item.title}
-              description={item.description}
+              title={stringCutTitle(item.title)}
+              description={stringCutDescription(item.description)}
               key={index}
             />
           );
