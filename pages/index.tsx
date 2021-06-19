@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import Footer from "./compornents/Footer/Footer";
-import Card from "./compornents/Card/Card";
+import Footer from "../compornents/Footer/Footer";
+import Card from "../compornents/Card/Card";
 import { useEffect, useState, ComponentProps } from "react";
 
 type Response = {
